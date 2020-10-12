@@ -1,8 +1,9 @@
 $(function() {
+    // 解构layui
     const { form, layer } = layui;
     // const layer = layui.layer;
-
-    // 去登录
+    // const form = layui.form;
+    // 去登录按钮
     $('#link_login').on('click', function() {
         $('.reg-box').hide()
         $('.login-box').show()
@@ -12,8 +13,7 @@ $(function() {
         $('.reg-box').show()
         $('.login-box').hide()
     });
-
-    // const form = layui.form;
+    // 表单验证
     form.verify({
         'pwd': [/^[\S]{6,12}/, '密码6-12位，不能出现空格'],
         repwd(value) {
@@ -25,6 +25,7 @@ $(function() {
     });
     //注册请求
     $('#form_reg').on('submit', function(e) {
+        //阻止表单默认提交
         e.preventDefault()
         $.post('/api/reguser', {
             username: $('#form_reg [name=username]').val(),
@@ -35,6 +36,7 @@ $(function() {
                 return;
             }
             layer.msg(res.message);
+            //注册成功，跳转回登录页面
             $('#link_login').click();
         })
     });
@@ -47,12 +49,12 @@ $(function() {
         }, function(res) {
             if (res.status !== 0) {
                 layer.msg(res.message);
-                return
+                return;
             }
             layer.msg(res.message);
             //保存token
             localStorage.setItem('token', res.token);
-            location.href = './index.html'
+            location.href = './index.html';
         })
-    })
+    });
 })
