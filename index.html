@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>后台主页</title>
@@ -11,30 +10,31 @@
     <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
     <!-- 导入自己的样式表 -->
     <link rel="stylesheet" href="/assets/css/index.css" />
-</head>
+  </head>
 
-<body class="layui-layout-body">
+  <body class="layui-layout-body">
     <div class="layui-layout layui-layout-admin">
-        <div class="layui-header">
-            <div class="layui-logo">
-                <img src="/assets/images/logo.png" alt="" />
-            </div>
-            <!-- 头部区域（可配合layui已有的水平导航） -->
+      <div class="layui-header">
+        <div class="layui-logo">
+          <img src="/assets/images/logo.png" alt="" />
+        </div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
 
-            <ul class="layui-nav layui-layout-right">
-                <li class="layui-nav-item">
-                    <a href="javascript:;" class="userinfo">
-                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img" /> 个人中心
-                        <span class="text-avatar">A</span>
-                    </a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
-                        <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
-                        <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;" id="btnLogout"><span class="iconfont icon-tuichu"></span>退出</a
+        <ul class="layui-nav layui-layout-right">
+          <li class="layui-nav-item">
+            <a href="javascript:;" class="userinfo">
+              <img src="http://t.cn/RCzsdCq" class="layui-nav-img" /> 个人中心
+              <span class="text-avatar">A</span>
+            </a>
+            <dl class="layui-nav-child">
+              <dd><a href="/user/user_info.html" target="fm">基本资料</a></dd>
+              <dd><a href="/user/user_avatar.html" target="fm">更换头像</a></dd>
+              <dd><a href="/user/user_pwd.html" target="fm">重置密码</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;" id="btnLogout"
+              ><span class="iconfont icon-tuichu"></span>退出</a
             >
           </li>
         </ul>
@@ -63,19 +63,19 @@
               >
               <dl class="layui-nav-child">
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/article/art_cate.html" target="fm"
                     ><i class="layui-icon layui-icon-template-1"></i>
                     文章类别</a
                   >
                 </dd>
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/article/art_list.html" target="fm" id="back"
                     ><i class="layui-icon layui-icon-template-1"></i>
                     文章列表</a
                   >
                 </dd>
                 <dd>
-                  <a href="javascript:;"
+                  <a href="/article/art_pub.html" target="fm" id="reback"
                     ><i class="layui-icon layui-icon-template-1"></i>
                     发表文章</a
                   >
